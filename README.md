@@ -2,13 +2,27 @@
 
 Patches Matplotlib-generated svg to be able to open them properly in Affinity Designer.
 
+It can be yours simply though
+
+``` bash
+pip install AffinitySvgPatcher
+```
+
 ## Usage
+
+From python
 
 ``` python
 from AffinitySvgPatcher import AffinitySvgPatcher
 
 patcher = AffinitySvgPatcher('path/to/file.svg')
 patcher.patch_svg(save = True, save_dir = 'dir/to/save', postfix = '-patched')
+```
+
+From command line
+
+```bash
+AffinitySvgPatcher path/to/file.svg --postfix patched --dir .
 ```
 
 ## Patches
